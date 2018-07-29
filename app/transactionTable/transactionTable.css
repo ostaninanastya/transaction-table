@@ -1,0 +1,247 @@
+/* common */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    user-select: none;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.container {
+    width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.headers {
+    color: black;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    margin: 18px;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    width: 400px;
+    display: inline-block;
+}
+
+/* search block */
+.search-container {
+    width: 820px;
+    margin: auto;
+}
+
+.labels {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 16px;
+    color: #36438f;
+}
+
+.fix-chosen-select {
+    height: 80px;
+}
+
+.chosen-select {
+    width: 802px;
+}
+
+.chosen-container .chosen-drop {
+    font-size: 15px;
+    padding: 0.1rem 0 0.1rem .375rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid rgba(206, 212, 218, 0.44);
+}
+
+.chosen-container .chosen-results {
+    max-height: 127px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+    line-height: 20px;
+}
+
+.chosen-container-multi .chosen-choices {
+    width: 802px;
+    min-height: 40px;
+    font-size: 15px;
+    margin: 0;
+    padding: .17rem .75rem;
+    line-height: 2.3;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-image: none;
+}
+
+.chosen-container .chosen-results li {
+    padding: .17rem .75rem;
+}
+
+/* table */
+.table-container {
+    min-height: 500px;
+    position: relative;
+}
+
+.table {
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 1px #e3e4e8;
+    overflow: hidden;
+    width: 1140px;
+}
+
+.pink-style {
+    line-height: 1.55;
+    font-size: 14px;
+    font-weight: 300;
+    font-variant: small-caps;
+    color: #ffffff;
+    background-color: #ff005b;
+}
+
+.paginate_button.current:hover {
+    color: rgba(255, 0, 91, 0.08) !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid rgba(54, 67, 143, 0.21);
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 1px solid rgba(54, 67, 143, 0.21);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #212529 !important;
+    border: 1px solid rgba(54, 67, 143, 0.21);
+    background: transparent;
+
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+
+    background-color: rgba(54, 67, 143, 0.03);
+    background-image: none;
+
+}
+
+.dataTables_wrapper {
+    min-height: 470px;
+}
+
+.dataTables_info {
+    position: absolute;
+    bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* projects block */
+.projects-container {
+    width: 400px;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 16px;
+    color: #36438f;
+    margin: auto;
+}
+
+/* rating block */
+.rate-container {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 16px;
+    color: #36438f;
+    width: 1210px;
+    margin: auto;
+}
+
+.percent-span {
+    float: right;
+    color: #426a9e;
+    opacity: 0.4;
+    font-size: 15px;
+}
+
+.rate-graph {
+    display: inline-block;
+    vertical-align: top;
+    width: 800px;
+}
+
+.rate-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    margin-left: 20px;
+}
+
+.list-form {
+    width: 250px;
+}
+
+.no-default-list {
+    list-style: none;
+}
+
+.no-default-list li {
+    position: relative;
+    padding: 5px 0 5px 5px;
+    cursor: pointer;
+}
+
+.no-default-list li:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #0076ff;
+    content: "";
+    top: 13px;
+    left: -20px;
+    transition: .3s ease-in-out;
+}
+
+.no-default-list li:after {
+    position: absolute;
+    border-left: 1px solid rgba(0, 118, 255, 0.19);
+    width: 3px;
+    bottom: -11px;
+    content: "";
+    left: -18px;
+    top: 20px;
+    right: 60px;
+}
+
+.no-default-list li:hover:before {
+    box-shadow: 0 0 0 2px #0076ff;
+
+}
+
+.no-default-list li:hover .percent-span {
+    font-size: 16px;
+    transition: .3s font-size;
+}
+
+.no-default-list li:last-child:after {
+    content: none;
+}
