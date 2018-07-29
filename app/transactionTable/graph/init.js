@@ -1,12 +1,9 @@
 const json = require('../data/data.json');
 
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-require( 'datatables.net' )( window, $ );
-require( 'datatables.net-dtt' )( window, $ );
-
-import 'datatables.net-dt/css/jquery.dataTables.css';
+var $ = require( 'jquery' );
+import dt from 'datatables.net';
+import 'datatables.net-dt/css/jquery.datatables.css';
+//import 'datatables.net-dt/css/jquery.datatables.css';
 
 const rate = [];
 const initialData = [];
