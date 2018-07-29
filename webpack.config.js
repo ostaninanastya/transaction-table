@@ -27,8 +27,8 @@ module.exports = {
                 use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             },
             {
-                test: /datatables\.net.*/,
-                loader: 'imports-loader?define=>false'
+                test: /\.(svg|png|jpe?g|gif)$/,
+                loader: 'url-loader'
             }
         ]
     },
@@ -39,13 +39,6 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {from:'./app/transactionTable/data/data.json',to:'data/'}
-        ]),
-
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery'
-        })
+        ])
     ]
 };

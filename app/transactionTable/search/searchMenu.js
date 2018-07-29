@@ -1,3 +1,5 @@
+import {table, initialData} from "../graph/init"
+
 const BY = {"PAYMENT_METHOD": 4, "USER": 5};
 let currentTableData;
 

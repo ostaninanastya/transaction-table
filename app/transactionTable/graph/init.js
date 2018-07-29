@@ -1,16 +1,13 @@
 const json = require('../data/data.json');
 
-var $ = require( 'jquery' );
-import dt from 'datatables.net';
-import 'datatables.net-dt/css/jquery.datatables.css';
-//import 'datatables.net-dt/css/jquery.datatables.css';
-
 const rate = [];
-const initialData = [];
+export const initialData = [];
 const projects = new Set();
+export let table;
 
 export default function init() {
-
+console.log("hey");
+console.log(json);
 $.each(json, function (key, value) {
     let rowData = [];
     rowData.push(value.transaction.id);
@@ -31,7 +28,7 @@ $.each(json, function (key, value) {
     else rate[value.transaction.payment_method.name] = 1;
 });
 
-const table = $('#transaction-table').dataTable({
+table = $('#transaction-table').dataTable({
     data: initialData,
     searching: false,
     "columnDefs": [
