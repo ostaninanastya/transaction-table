@@ -36,6 +36,8 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^0.28.11",
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "http-server": "^0.11.1",
@@ -48,7 +50,8 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "imports-loader": "^0.8.0"
   },
   "bugs": {
     "url": "https://github.com/ostaninanastya/transaction-table/issues"

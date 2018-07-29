@@ -25,6 +25,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+            },
+            {
+                test: /datatables\.net.*/,
+                loader: 'imports-loader?define=>false'
             }
         ]
     },
@@ -36,6 +40,7 @@ module.exports = {
         new CopyWebpackPlugin([
             {from:'./app/transactionTable/data/data.json',to:'data/'}
         ]),
+
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"

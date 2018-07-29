@@ -1,8 +1,3 @@
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-
-
 const BY = {"PAYMENT_METHOD": 4, "USER": 5};
 let currentTableData;
 

@@ -3,6 +3,10 @@ const json = require('../data/data.json');
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
+require( 'datatables.net' )( window, $ );
+require( 'datatables.net-dtt' )( window, $ );
+
+import 'datatables.net-dt/css/jquery.dataTables.css';
 
 const rate = [];
 const initialData = [];
