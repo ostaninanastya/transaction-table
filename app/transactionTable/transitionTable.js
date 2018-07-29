@@ -1,86 +1,17 @@
-console.log("start");
+import 'jquery/src/jquery';
+import 'datatables.net-dt';
+import 'chosen-js';
+import 'bootstrap';
 
-window.$ = window.jQuery = require('jquery');
-require('chosen-js');
-require('chosen-js/chosen.css');
-
-
+import 'datatables.net-dt/css/jquery.dataTables.css';
+import 'chosen-js/chosen.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./transactionTable.css";
 
+
 import init from "./graph/init";
-//import search from "./search/searchMenu";
+import search from "./search/chosenSearch";
+import * as inputSearch from "./search/inputSearch";
 
-console.log("from index");
 init();
-
-
-
-const BY = {"PAYMENT_METHOD": 4, "USER": 5};
-let currentTableData;
-
-
-
-function search(parameter) {
-    currentTableData = [];
-    initialData.forEach(item => {
-        if (item[parameter].toLowerCase().indexOf($(this).val().toLowerCase()) !== -1 && !currentTableData.includes(item)) {
-            currentTableData.push(item);
-        }
-    });
-
-    if (currentTableData.length === 0) {
-        table.fnClearTable();
-        table.fnDraw();
-        return;
-    }
-
-    table.fnClearTable();
-    table.fnAddData(currentTableData);
-    table.fnDraw();
-}
-
-
-
-        $("#payment-method-search").keyup(function () {
-            console.log("change");
-            $("#user-search").val('');
-            $(".chosen-select").val('').trigger("chosen:updated");
-            search.call(this, BY.PAYMENT_METHOD);
-        });
-
-        $("#user-search").keyup(function () {
-            $("#payment-method-search").val('');
-            $(".chosen-select").val('').trigger("chosen:updated");
-            search.call(this, BY.USER);
-        });
-
-        $(".chosen-select").chosen().change(function () {
-            $("#payment-method-search").val('');
-            $("#user-search").val('');
-
-            currentTableData = [];
-            table.dataTable().fnClearTable();
-
-            if ($(this).val() === null) {
-                $("#form_field").trigger("chosen:updated");
-                table.fnAddData(initialData);
-                table.fnDraw();
-                return;
-            }
-
-            $(this).val().forEach(project => {
-                initialData.forEach(row => {
-                    if (row[3].indexOf(project) !== -1 && !currentTableData.includes(row)) {
-                        currentTableData.push(row);
-                    }
-                })
-            });
-
-            table.fnAddData(currentTableData);
-            table.fnDraw();
-
-        });
-
-
-
-
+search();

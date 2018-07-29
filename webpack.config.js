@@ -38,7 +38,10 @@ module.exports = {
             filename: 'style.css',
         }),
         new CopyWebpackPlugin([
-            {from:'./app/transactionTable/data/data.json',to:'data/'}
+            {from: './app/transactionTable/data/data.json', to: 'data/'}
         ])
-    ]
+    ],
+    externals: {
+        jquery: 'jQuery'
+    }
 };
